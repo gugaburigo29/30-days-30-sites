@@ -12,7 +12,7 @@ class App extends React.Component {
                 <main>
                     <Routes/>
                 </main>
-                <Footer/>
+               {/* <Footer/>*/}
             </React.Fragment>
         );
     }

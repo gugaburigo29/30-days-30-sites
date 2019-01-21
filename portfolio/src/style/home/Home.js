@@ -1,23 +1,33 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import {GREY, PRIMARY, TEXT_COLOR} from "../constants";
+import {CUBIC_BEZIER, GREY, PRIMARY, TEXT_COLOR} from "../constants";
 import pxToRem from '../utils/pxToRem'
 
 const Content = styled.div`
       width: 100%;
-      height: 500px;
+      height: 700px;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
-      background-image: url(${props => props.backgroundImage});
-      background-repeat: no-repeat;
-      background-position: 100% 85%;
+      ${ props => props.paddingBottom && `
+          padding-bottom: ${ props.paddingBottom }px
+      ` }
+     ${ props => props.backgroundImage && `
+          background-image: url(${props.backgroundImage});
+          background-repeat: no-repeat;
+          background-position: 100% 65%;
+     `}
+     ${ props => props.backgroundColor && `
+          background-color: ${ props.backgroundColor }
+     ` }
 `
 
 Content.propTypes = {
-    backgroundImage: PropTypes.string
+    backgroundImage: PropTypes.string,
+    backgroundColor: PropTypes.string,
+    paddingBottom: PropTypes.number
 }
 
 const Title = styled.h2`
@@ -58,10 +68,33 @@ const Icon = styled.div`
       justify-content: center;
       align-items: center;
       
-      :hover{
+      path{
+          transition: .5s ${CUBIC_BEZIER};
+      }
+      
+      &:hover{
           border-color: ${props => props.color || PRIMARY};
           background: ${props => props.color || PRIMARY};
+          
+        path{
+          fill: white;
+          stroke: white;
+        }
       }
+`
+
+const Informations = styled.article`
+      width: 100%;
+      height: 80px;
+      max-width: 800px;
+      background: white;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, .15);
+      position: absolute;
+      bottom: -25px;
+      left: 0;
+      right: 0;
+      margin: 0 auto;
+      border-radius: 50px;
 `
 
 export {
@@ -69,5 +102,6 @@ export {
     Content,
     Title,
     SocialIcons,
-    Icon
+    Icon,
+    Informations
 }
