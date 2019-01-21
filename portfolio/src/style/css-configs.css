@@ -1,0 +1,8 @@
+body {
+    font-family: 'Raleway', -apple-system, sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    margin: 0 auto -80px;
+}
