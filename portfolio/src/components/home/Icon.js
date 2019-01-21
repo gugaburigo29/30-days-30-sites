@@ -6,14 +6,13 @@ import {Icon} from '../../style/home/Home'
 const IconComponent = props => (
     <Icon>
         <a href={props.link} target='_blank'>
-            <img src={props.image} alt={props.name}/>
+            { props.children }
         </a>
     </Icon>
 )
 
 IconComponent.propTypes = {
     link: PropTypes.string,
-    image: PropTypes.string,
     name: PropTypes.string,
 }
 
