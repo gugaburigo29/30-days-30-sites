@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 import {GREY, PRIMARY, TEXT_COLOR} from "../../constants/style/colors";
 import pxToRem from '../utils/pxToRem'
 
-const Content = styled.section`
+const Content = styled.div`
       width: 100%;
       height: 500px;
       display: flex;
@@ -13,7 +13,7 @@ const Content = styled.section`
       align-items: flex-start;
       background-image: url(${props => props.backgroundImage});
       background-repeat: no-repeat;
-      background-position: bottom right;
+      background-position: 100% 85%;
 `
 
 Content.propTypes = {
