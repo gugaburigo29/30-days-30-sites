@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import {GREY, PRIMARY, TEXT_COLOR} from "../../constants/style/colors";
+import {GREY, PRIMARY, TEXT_COLOR} from "../constants";
 import pxToRem from '../utils/pxToRem'
 
 const Content = styled.div`

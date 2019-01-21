@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 import {Link} from "react-router-dom";
-import {PRIMARY, TEXT_COLOR} from "../../constants/style/colors"
+import {PRIMARY, TEXT_COLOR} from "../constants"
 
 export const Header = styled.header`
       width: 100%;

@@ -1,7 +1,7 @@
 import styled from 'styled-components'
 import PropTypes from 'prop-types'
 
-import {CUBIC_BEZIER, PRIMARY} from "../../constants/style/colors";
+import {CUBIC_BEZIER, PRIMARY} from "../constants";
 import pxToRem from "../utils/pxToRem"
 import toRGBA from "../utils/toRGBA"
 
